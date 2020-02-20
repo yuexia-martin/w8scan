@@ -3,9 +3,11 @@
 import urllib,hashlib,Queue,threading,json,urlparse,socket,base64
 
 # init hackhttp
-code = urllib.urlopen("https://raw.githubusercontent.com/BugScanTeam/hackhttp/master/hackhttp/hackhttp.py")
+# code = urllib.urlopen("https://raw.githubusercontent.com/BugScanTeam/hackhttp/master/hackhttp/hackhttp.py")
+# 修复github的raw被墙导致无法载入的问题
+code = urllib.urlopen(_B+'py/plugins/hackhttp.py')
 exec(code.read())
-
+print('ok')
 # Testing Hackhttp
 # hh = hackhttp()
 # code, head, body, redirect, log = hh.http('https://blog.yesfree.pw')
